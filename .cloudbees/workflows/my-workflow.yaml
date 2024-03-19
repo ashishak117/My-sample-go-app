@@ -1,12 +1,10 @@
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
 name: My workflow
-
 on:
   push:
     branches:
-      - '**'
-
+      - "**"
 jobs:
   build:
     steps:
@@ -15,5 +13,3 @@ jobs:
         shell: sh
         run: |
           echo "hello world"
-      - name: Scan with SonarQube bundled action
-        uses: cloudbees-io/sonarqube-bundled-sast-scan-code@v1
