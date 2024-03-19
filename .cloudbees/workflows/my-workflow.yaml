@@ -14,4 +14,6 @@ jobs:
         uses: docker://golang:1.20.3-alpine3.17
         shell: sh
         run: |
-          echo "hello Universe!!!!"
+          echo "hello world"
+      - name: Scan with SonarQube bundled action
+        uses: cloudbees-io/sonarqube-bundled-sast-scan-code@v1
